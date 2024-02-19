@@ -126,3 +126,16 @@ source $ZSH/oh-my-zsh.sh
 #
 
 spaceship_vi_mode_enable
+
+# assuming you did "brew install python@3.10"
+# in your ~/.zshrc, near the bottom
+export PATH="$(brew --prefix python@3.10)/bin:$PATH"
+
+## UNCOMMENT IF YOU HAVE SDKMAN
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+## UNCOMMENT THE LINES BELOW:
+# export SDKMAN_DIR="$HOME/.sdkman"
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# export JAVA_HOME="/Users/jtorres/.sdkman/candidates/java/current"
+
