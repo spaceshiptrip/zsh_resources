@@ -3,8 +3,13 @@
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+# vi-mode spaceship
+export RPS1="%{$reset_color%}"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+setopt auto_cd
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -20,6 +25,12 @@ SPACESHIP_CHAR_COLOR_SUCCESS="yellow"
 SPACESHIP_CHAR_SYMBOL='~'
 SPACESHIP_PROMPT_DEFAULT_PREFIX="$USER"
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
+SPACESHIP_PACKAGE_SHOW="${SPACESHIP_PACKAGE_SHOW:=false}"
+SPACESHIP_HG_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_ELIXIR_SHOW=false
+SPACESHIP_XCODE_SHOW_LOCAL=false
+SPACESHIP_XCODE_SHOW_GLOBAL=false
 SPACESHIP_VENV_COLOR="magenta"
 SPACESHIP_VENV_PREFIX="("
 SPACESHIP_VENV_SUFFIX=")"
@@ -33,6 +44,30 @@ SPACESHIP_BATTERY_SHOW='false'
 SPACESHIP_BATTERY_SYMBOL_DISCHARGING='\uf57d'
 SPACESHIP_BATTERY_SYMBOL_FULL='\uf583'
 SPACESHIP_BATTERY_SYMBOL_CHARGING='\uf588'
+
+# VI_MODE
+SPACESHIP_VI_MODE_SHOW=true
+SPACESHIP_VI_MODE_PREFIX=""
+SPACESHIP_VI_MODE_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"
+SPACESHIP_VI_MODE_INSERT="[I]"
+SPACESHIP_VI_MODE_NORMAL="[N]"
+SPACESHIP_VI_MODE_COLOR="white"
+
+# JOBS
+SPACESHIP_JOBS_SHOW="true"
+SPACESHIP_JOBS_PREFIX=""
+SPACESHIP_JOBS_SUFFIX=" "
+SPACESHIP_JOBS_SYMBOL="‚ú¶"
+SPACESHIP_JOBS_COLOR="blue"
+
+# EXIT CODE
+SPACESHIP_EXIT_CODE_SHOW=false
+SPACESHIP_EXIT_CODE_PREFIX="("
+SPACESHIP_EXIT_CODE_SUFFIX=") "
+SPACESHIP_EXIT_CODE_SYMBOl="‚úò "
+SPACESHIP_EXIT_CODE_COLOR="red"
+
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -102,6 +137,11 @@ source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# nvm ---> IS THIS NEEDED?
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"
+# [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && \. "/usr/local/opt/nvm/etc/bash_completion"
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -134,8 +174,8 @@ export PATH="$(brew --prefix python@3.10)/bin:$PATH"
 ## UNCOMMENT IF YOU HAVE SDKMAN
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 ## UNCOMMENT THE LINES BELOW:
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-# export JAVA_HOME="/Users/jtorres/.sdkman/candidates/java/current"
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export JAVA_HOME="/Users/jtorres/.sdkman/candidates/java/current"
 
